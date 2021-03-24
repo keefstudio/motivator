@@ -197,9 +197,10 @@ if (!localStorage.appdata) {
 
 import Vue from "vue";
 import App from "./App.vue";
-import './registerServiceWorker'
+import wb from "./registerServiceWorker";
 
 // set up and create vue instance
+Vue.prototype.$workbox = wb;
 
 Vue.config.productionTip = false;
 new Vue({
