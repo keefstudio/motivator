@@ -197,6 +197,7 @@ if (!localStorage.appdata) {
 
 import Vue from "vue";
 import App from "./App.vue";
+import './registerServiceWorker'
 
 // set up and create vue instance
 
