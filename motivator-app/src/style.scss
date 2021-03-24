@@ -911,11 +911,12 @@ select{
     button{
         margin-right:0;
         padding:5px;
-        //border-color: $bordercolor;
+        color: $bordercolor;
+        border-color: $bordercolor;
 
-        &:focus{
-            //border-color:$highlight;
-            background:$highlight;
+        &:hover, &:focus{
+            border-color:$accentcolor;
+            color:$accentcolor;
         }
     }
 }
@@ -1239,6 +1240,13 @@ select{
     right:20px;
     font-size:1.6rem;
     line-height: 1em;
+    color:$bordercolor;
+    border-color:$bordercolor;
+
+    &:hover, &:focus{
+        color:$accentcolor;
+        border-color:$accentcolor;
+    }
 }
 
 .alert{

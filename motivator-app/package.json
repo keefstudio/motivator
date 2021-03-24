@@ -15,6 +15,7 @@
     "reset-css": "5.0.1",
     "sass-loader": "10.1.1",
     "vue": "^2.6.11",
+    "vue-cli-plugin-pwa": "^4.6.0",
     "vue-focus-outside": "0.2.1",
     "vue-router": "3.5.1",
     "vuedraggable": "2.24.3"
