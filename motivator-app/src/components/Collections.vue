@@ -1,5 +1,5 @@
 <template>
-  <div class="collections cf">
+  <div class="collections cf" :class="{showing: showcollections}">
     <div class="collections-menu" v-focus-outside="focusOutsideMenu">
       <ul>
         <li>

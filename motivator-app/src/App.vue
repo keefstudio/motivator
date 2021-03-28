@@ -1,5 +1,5 @@
 <template>
-  <div id="app" :class="{ noscroll: showintro }">
+  <div id="app" :class="{ noscroll: showintro, stickynav: navstick }">
     <div
       class="container-fluid intro"
       ref="intro"
@@ -10,10 +10,10 @@
           <div class="col-md introcopy">
             <h2><i class="icon-check-1"></i>Motivator</h2>
             <p>
-              A list making app to help mix up routines and skirt indecision.
-              Sort items into buckets and collections then create radomly
-              generated to-do lists. Check off and delete items to track
-              progress and empty buckets, and be more motivated!
+              A list making app to help with routine and indecision.
+              Sort bucket items into collections and create radomly
+              generated to-do lists. Check and delete items to track
+              progress, and stay motivated!
             </p>
           </div>
           <div class="col-md intromenu">
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <header class="header container-fluid">
+    <header id="header" class="header container-fluid">
       <div class="row">
         <div class="col">
           <div class="brand">
@@ -144,7 +144,7 @@
       v-bind:removedeleteditems.sync="collections[cindex].removedeleteditems"
       v-on:closeoutput="closeOutput"
     />
-    <div class="alert" :class="{ showing: bucketscleared > 0 }">
+    <div class="alert" :class="{ showing: alertmessage }">
       <div class="alert-inner">
         <h3>
           {{ alertmessage }}
@@ -195,14 +195,32 @@ export default {
       showintro: true,
       bucketscleared: 0,
       alertmessage: "",
+      navstick: false,
     };
   },
   created() {
+    //workbox for vue-pwa (add to home screen)
     if (this.$workbox) {
       this.$workbox.addEventListener("waiting", () => {
         this.showUpdateUI = true;
       });
     }
+    //scroll listener for sticky nav
+    var scrollpos = 0;
+    window.addEventListener('scroll', () => {
+      var scrollY = window.scrollY;
+      //var headerheight = document.getElementById('header').offsetHeight;
+      if(scrollY < scrollpos && scrollY > 3){
+        this.navstick = true;
+      } else {
+        this.navstick = false;
+        this.showcollections = false;
+      }
+      scrollpos = scrollY;
+    });
+  },
+  destroyed () {
+    window.removeEventListener('scroll');
   },
   async accept() {
     this.showUpdateUI = false;
@@ -319,6 +337,8 @@ export default {
         this.showcollections = false;
         //set cindex to collection: used glabally
         this.cindex = parseInt(index);
+        //scroll to top of page
+        window.scrollTo(0, 0);
       });
     },
     //delete current collection
@@ -344,6 +364,8 @@ export default {
         //delete current collection
         this.collections.splice(index, 1);
       }
+      //scroll to top of page
+      window.scrollTo(0, 0);
     },
     //for editing collection title
     focusInput: function (input) {
@@ -554,8 +576,18 @@ export default {
           );
         });
 
-        //pause for animation
+        //pause for CSS animation
         gsap.delayedCall(1, function () {
+          //display items deleted alert
+          var deleteditems = deduped.length;
+          if(deleteditems > 0){
+            scope.alertmessage = deleteditems + " item";
+            if(deleteditems > 1){
+              scope.alertmessage += "s";
+            }
+            scope.alertmessage += " completed";
+            scope.showAlert();
+          }
           //loop through buckets to remove tagged items
           //bucket loop
           for (
@@ -580,13 +612,26 @@ export default {
             //empty trash
             scope.collections[scope.cindex].buckets[i].trashed = [];
 
+            //force update bucket lists
+            scope.$refs.bucketslist.forceUpdateLists();
+
             //delete bucket if empty
             if (scope.collections[scope.cindex].buckets[i].items.length == 0) {
               scope.deleteBucket(i);
+              //construct alert message
+              scope.bucketscleared++;
+              scope.alertmessage = scope.bucketscleared + " bucket";
+              if (scope.bucketscleared > 1) {
+                scope.alertmessage += "s";
+              }
+              scope.alertmessage += " emptied";
+              if (scope.collections[scope.cindex].buckets.length === 0) {
+                scope.alertmessage = "All buckets emptied";
+              }
               scope.showAlert();
               //back up bucket loop for one less bucket
               i--;
-            }
+            } 
           }
         });
       }
@@ -599,16 +644,6 @@ export default {
       this.showoutput = data;
     },
     showAlert: function () {
-      //construct alert message
-      this.bucketscleared++;
-      this.alertmessage = this.bucketscleared + " bucket";
-      if (this.bucketscleared > 1) {
-        this.alertmessage += "s";
-      }
-      this.alertmessage += " emptied";
-      if (this.collections[this.cindex].buckets.length === 0) {
-        this.alertmessage = "All buckets emptied";
-      }
       //animate alert popup
       var scope = this;
       gsap.fromTo(
@@ -624,6 +659,7 @@ export default {
           onReverseComplete: function () {
             //reset
             scope.bucketscleared = 0;
+            scope.alertmessage = "";
           },
         }
       );

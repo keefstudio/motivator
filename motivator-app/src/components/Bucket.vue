@@ -104,6 +104,10 @@ export default {
       if (data[data.length - 1] == "") {
         data.splice(data.length - 1, 1);
       }
+      //return something in nothing
+      if(data.length == 0){
+        data = [' '];
+      }
       //update bucket items list array
       this.bucket.items = data;
     },
