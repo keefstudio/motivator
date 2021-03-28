@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.23381c1c1405425227fa3d0618c6d511.js"
+  "/precache-manifest.f29fb690e8c2d4a15fcc0067fc0190d8.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "motivator-app"});
