@@ -90,10 +90,11 @@ export default {
     },
     bucketSorted: function (data) {
       this.forceUpdateLists();
-      //animate moved item
+      //animate moved item (using CSS animation instead)
       gsap.from(".bucket-card:nth-of-type(" + (data.moved.newIndex + 1) + ")", {
-        scale: 0.9,
+        scale: 0.95,
         duration: 0.2,
+        clearProps:"transform"
       });
     },
     animateBuckets: function () {
@@ -104,6 +105,7 @@ export default {
           scale: 0.9,
           opacity: 0,
           duration: 0.3,
+          clearProps:"transform",
           stagger: {
             each: 0.12,
             ease: "power4.Out",
@@ -114,6 +116,7 @@ export default {
           scale: 0.9,
           opacity: 0,
           duration: 0.3,
+          clearProps:"transform",
           stagger: {
             each: 0.12,
             ease: "power4.Out",
@@ -125,6 +128,7 @@ export default {
           scale: 0.9,
           opacity: 0,
           duration: 0.3,
+          clearProps:"transform",
           stagger: {
             each: 0.12,
             ease: "power4.Out",

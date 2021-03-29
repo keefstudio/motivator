@@ -44,10 +44,11 @@
         ref="cardlist"
         :rows="bucket.items.length"
         v-model="cardlistitems"
+        @keyup="updateItems($event.target.value)"
         @blur="
           {
-            updateItems($event.target.value),
               (editcardlist = false),
+              updateItems($event.target.value),
               $emit('editbucket', false);
           }
         "
@@ -101,7 +102,7 @@ export default {
     updateItems: function (data) {
       data = data.split("\n");
       //remove last item if blank
-      if (data[data.length - 1] == "") {
+      if (data[data.length - 1] == "" && this.editcardlist == false) {
         data.splice(data.length - 1, 1);
       }
       //return something in nothing

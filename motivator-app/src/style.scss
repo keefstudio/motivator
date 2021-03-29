@@ -374,6 +374,11 @@ INTRO
                 }
             }
 
+            &.sortable-chosen a{
+                cursor:move;
+                background: $accentcolor;
+            }
+
             &.addnewcollection{
                 margin-top:15px;
                 border-radius:3px;
@@ -638,7 +643,6 @@ COLLECTIONS
                 margin:0;
                 padding:0;
                 min-width: auto;
-                padding-left:50px;
                 line-height: 3.6rem;
 
                 &:before{
@@ -660,7 +664,7 @@ COLLECTIONS
 
                 a{
                     margin:0;
-                    padding:0 10px;
+                    padding:0 10px 0 50px;
                     font-size:2.2rem;
                     line-height:3.6rem;
                 }
@@ -807,6 +811,11 @@ BUCKETS
 
     &.trashed{
         opacity:.5;
+    }
+
+    &.sortable-chosen{
+        transform: scale(.95);
+        transition: transform .2s ease-out;
     }
 
     h4{
@@ -988,8 +997,8 @@ BUCKETS
 }
 
 .ghost{
-    transform: scale(.9);
-
+    transform: scale(.95);
+    transition:none !important;
     &:after{
         content:"";
         display:block;

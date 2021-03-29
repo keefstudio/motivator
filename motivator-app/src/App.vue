@@ -153,7 +153,7 @@
       </div>
     </div>
     <footer class="footer container-fluid">
-      *App data is saved to browser cache. &copy; Keef Studio 2021.
+      *App data is saved to browser cache. &copy; Keef Studio 2021. View project on <a href="https://github.com/keefstudio/motivator">Github</a>.
     </footer>
   </div>
 </template>
