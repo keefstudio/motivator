@@ -10,7 +10,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/keefstudio/motivator-app">
+  <a href="https://github.com/keefstudio/motivator">
     <img src="icons/checkmark.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -23,11 +23,11 @@
     progress, and stay motivated!
     <br />
     <br />
-    <a href="https://motivator-app.keefstudio.com">View Demo</a>
+    <a href="https://motivator.keefstudio.com">View Demo</a>
     ·
-    <a href="https://github.com/keefstudio/motivator-app/issues">Report Bug</a>
+    <a href="https://github.com/keefstudio/motivator/issues">Report Bug</a>
     ·
-    <a href="https://github.com/keefstudio/motivator-app/issues">Request Feature</a>
+    <a href="https://github.com/keefstudio/motivator/issues">Request Feature</a>
   </p>
 </p>
 
@@ -75,16 +75,16 @@ This is an example of how to list things you need to use the software and how to
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/keefstudio/motivator-app.git
+   git clone https://github.com/keefstudio/motivator.git
    ```
 2. Install NPM packages
    ```sh
-   cd motivator-app
+   cd motivator
    npm install
    ```
 3. Run Project Locally
    ```sh
-   cd motivator-app
+   cd motivator
    npm run serve
    ```
 
@@ -93,4 +93,4 @@ This is an example of how to list things you need to use the software and how to
 
 Cameron O'Keefe - keefstudio@gmail.com
 
-Project Link: [https://github.com/keefstudio/motivator-app](https://github.com/keefstudio/motivator-app)
+Project Link: [https://github.com/keefstudio/motivator](https://github.com/keefstudio/motivator)
