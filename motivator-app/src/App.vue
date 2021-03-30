@@ -646,23 +646,25 @@ export default {
     showAlert: function () {
       //animate alert popup
       var scope = this;
-      gsap.fromTo(
-        ".alert",
-        1,
-        { opacity: 0 },
-        {
-          opacity: 2,
-          ease: "power4.easeOut",
-          onComplete: function () {
-            this.reverse();
-          },
-          onReverseComplete: function () {
-            //reset
-            scope.bucketscleared = 0;
-            scope.alertmessage = "";
-          },
-        }
-      );
+      this.$nextTick(function () {
+        gsap.fromTo(
+          ".alert",
+          1,
+          { opacity: 0 },
+          {
+            opacity: 2,
+            ease: "power4.easeOut",
+            onComplete: function () {
+              this.reverse();
+            },
+            onReverseComplete: function () {
+              //reset
+              scope.bucketscleared = 0;
+              scope.alertmessage = "";
+            },
+          }
+        );
+      });
     },
   },
 };

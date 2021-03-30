@@ -14,7 +14,7 @@
     progress, and stay motivated!
     <br />
     <br />
-    <a href="https://motivator.keefstudio.com">View Demo</a>
+    <a href="https://motivator-app.keefstudio.com">View Demo</a>
     ·
     <a href="https://github.com/keefstudio/motivator/issues">Report Bug</a>
     ·
@@ -26,7 +26,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-This project was built ground-up (no UI libraries used) to showcase my abilities as a designer and developer. It is a responsive design progressive web application that may also be installed as a standalone app on mobile devices. Application data is saved to browser local storage which will persist through sessions, but will be cleared, or reset with browser cache is deleted.
+A ground-up responsive design progressive web application build to showcase my abilities as a font-end dev. This app works with modern browsers and may also be installed as a standalone application on mobile devices. App data is saved to browser localstorage which will persist through sessions until browser cache is deleted.
 
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
@@ -42,6 +42,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ### Built With
 
+* [node]()
 * [vue-cli]()
 * [gsap]()
 * [bootstrap-grid]()
