@@ -5,8 +5,8 @@
         <li>
           <a
             class="show-menu"
-            href="javascript:void(0)"
-            @click="showmenu = !showmenu"
+            href="#"
+            @click.prevent="showmenu = !showmenu"
             >{{ title }}</a
           >
           <ul v-show="showcollections || showmenu">
@@ -16,9 +16,9 @@
               v-bind:class="{ selected: index == cindex }"
             >
               <a
-                href="javascript:void(0)"
+                href="#"
                 ref="collectionlink"
-                @click="
+                @click.prevent="
                   $emit('loadcollection', index),
                     $event.target.blur,
                     (showmenu = false)
@@ -41,8 +41,8 @@
       <ul v-show="showcollections || showoptions">
         <li>
           <a
-            href="javascript:void(0)"
-            @click="
+            href="#"
+            @click.prevent="
               $emit('addcollection');
               showoptions = false;
             "
@@ -51,8 +51,8 @@
         </li>
         <li>
           <a
-            href="javascript:void(0)"
-            @click="
+            href="#"
+            @click.prevent="
               $emit('addcollection', 'duplicate');
               showoptions = false;
             "
@@ -61,8 +61,8 @@
         </li>
         <li @mouseleave="deleteactive = false">
           <em v-show="deleteactive">Really?</em>&nbsp;<a
-            href="javascript:void(0)"
-            @click.stop="deleteActive"
+            href="#"
+            @click.stop.prevent="deleteActive"
             ><span v-show="!deleteactive">Delete</span
             ><span v-show="deleteactive">Yes</span></a
           >

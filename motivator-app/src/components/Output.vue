@@ -43,7 +43,7 @@
         class="listempty"
         :class="{ visible: deleted.length == itemcount && itemcount > 0 }"
       >
-        <i class="icon-thumbs-up-1"></i> <strong>All done!</strong>
+        <i class="icon-thumbs-up-1"></i>
       </div>
 
       <div class="output-options">

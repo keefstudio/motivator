@@ -470,7 +470,7 @@ HEADER
       .stickynav &{
             position:fixed;
             top:0;
-            z-index: 99;
+            z-index: 999;
             animation: stickynavin .25s;
 
         }
@@ -1064,13 +1064,13 @@ RANDOMIZE
     padding:15px 30px;
     color:#fff;
     border-radius:3px;
-    border:2px solid #fff;
+    border:1px solid #fff;
     box-shadow: 0 0 10px $bordercolor;
     background: $accentcolor;
 
     &:hover, &:focus{
         background: $darkgray;
-        border-color:$darkgray;
+        border:1px solid #fff;
     }
 
     @media screen and (min-width: $md){

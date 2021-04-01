@@ -25,7 +25,7 @@
                 group="collectionlist"
                 ghostClass="ghost"
                 draggable=".menuitem"
-                delay="100"
+                delay="150"
               >
                 <li
                   class="menuitem"
@@ -33,8 +33,8 @@
                   v-bind:key="index"
                 >
                   <a
-                    href="javascript:void(0)"
-                    @click="
+                    href="#"
+                    @click.prevent="
                       loadCollection(index);
                       animateIntro(index);
                     "
@@ -43,8 +43,8 @@
                 </li>
                 <li class="addnewcollection">
                   <a
-                    href="javascript:void(0)"
-                    @click="
+                    href="#"
+                    @click.prevent="
                       addCollection();
                       animateIntro();
                     "
@@ -62,7 +62,7 @@
         <div class="col">
           <div class="brand">
             <h1>
-              <a href="javascript:void(0)" @click="animateIntro('reverse')"
+              <a href="#" @click.prevent="animateIntro('reverse')"
                 ><i class="icon-check-1"></i>Motivator</a
               >
             </h1>
@@ -149,7 +149,6 @@
         <h3>
           {{ alertmessage }}
         </h3>
-        <p>Good job!</p>
       </div>
     </div>
     <footer class="footer container-fluid">
@@ -210,9 +209,9 @@ export default {
     window.addEventListener('scroll', () => {
       var scrollY = window.scrollY;
       //var headerheight = document.getElementById('header').offsetHeight;
-      if(scrollY < scrollpos && scrollY > 3){
+      if(scrollY < (scrollpos - 5) && scrollY > 3){
         this.navstick = true;
-      } else {
+      } else if(scrollY > (scrollpos + 5)){
         this.navstick = false;
         this.showcollections = false;
       }
@@ -585,7 +584,7 @@ export default {
             if(deleteditems > 1){
               scope.alertmessage += "s";
             }
-            scope.alertmessage += " completed";
+            scope.alertmessage += " deleted";
             scope.showAlert();
           }
           //loop through buckets to remove tagged items

@@ -14,6 +14,12 @@
     progress, and stay motivated!
     <br />
     <br />
+    This app is and motivational experiment based on the idea
+    productivity is often hindered by decision exhaustion and 
+    option overload. By having to-do lists randomly generated, 
+    the app makes the decisions leaving more energy for the tasks.
+    <br />
+    <br />
     <a href="https://motivator-app.keefstudio.com">View Demo</a>
     ·
     <a href="https://github.com/keefstudio/motivator/issues">Report Bug</a>
@@ -26,7 +32,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-A ground-up responsive design progressive web application build to showcase my abilities as a font-end dev. This app works with modern browsers and may also be installed as a standalone application on mobile devices. App data is saved to browser localstorage which will persist through sessions until browser cache is deleted.
+A ground-up responsive design progressive web application built to be a living example of my work as a front-end developer. This app works with modern browsers and may also be installed as a standalone application on mobile devices. App data is saved to browser localstorage which will persist through sessions until browser cache is deleted.
 
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)

@@ -8,7 +8,7 @@
         group="bucketlist"
         ghostClass="ghost"
         draggable=".item"
-        delay="100"
+        delay="150"
         @start="sorted = true"
         @change="bucketSorted"
       >

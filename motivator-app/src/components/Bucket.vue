@@ -22,6 +22,12 @@
             $emit('editbucket', false);
           }
         "
+        @keyup.enter="
+          {
+            editcardtitle = false;
+            $emit('editbucket', false);
+          }
+        "
       />
       <ul
         v-show="!editcardlist"
@@ -113,7 +119,7 @@ export default {
       this.bucket.items = data;
     },
     //focus and select text in provided input
-    focusInput: function (input) {
+    focusInput: function (input, selectall) {
       this.$emit("editbucket", true);
       if (input == "cardtitle") {
         this.editcardtitle = true;
@@ -123,7 +129,9 @@ export default {
       }
       this.$nextTick(function () {
         this.$refs[input].focus();
-        this.$refs[input].select();
+        if(selectall == true){
+          this.$refs[input].select();
+        }
       });
     },
   },
