@@ -2,12 +2,12 @@
 <br />
 <p align="center">
   <a href="https://github.com/keefstudio/motivator">
-    <img src="icons/checkmark-icon.png" alt="Logo" width="80" height="80">
+    <img src="icons/checkmark-icon.png" alt="Logo" width="100" height="100">
   </a>
 
   <h1 align="center">Motivator App</h1>
 
-  <p align="center"><a href="https://motivator-app.keefstudio.com">View Demo</a>
+  <p align="center"><a href="https://motivator-app.keefstudio.com">Open App</a>
     ·
     <a href="https://github.com/keefstudio/motivator/issues">Report Bug</a>
     ·
@@ -16,7 +16,6 @@
     <br />
     </p>
 
-    
   <p align="center">
     A list making app to help with routine and indecision.
     Sort bucket items into collections and create radomly
@@ -27,16 +26,14 @@
     
   </p>
 </p>
+<br />
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A ground-up responsive design progressive web application built to be a living example of my work as a front-end developer. This app works with modern browsers and may also be installed as a standalone application on mobile devices. App data is saved to browser localstorage which will persist through sessions until browser cache is deleted.
+A ground-up responsive design progressive web application project, built to be a living example of my work as a front-end developer. This app works with modern browsers and may also be installed as a standalone application on mobile devices. App data is saved to browser localstorage which will persist through sessions until browser cache is deleted.
 
 The concept for this app is an experiment in motivation based on the idea that productivity is often hindered by decision-exhaustion and option-overload. By having to-do lists randomly generated&mdash;skipping the decision-making process, more energy is left for the tasks at hand.
-
-<a href="https://motivator-app.keefstudio.com" target="_blank">Open Motivator App</a>
-
 <br />
 
 ### Built With
@@ -44,16 +41,15 @@ The concept for this app is an experiment in motivation based on the idea that p
 * [gsap](https://greensock.com/gsap/)
 * [bootstrap-grid](https://www.npmjs.com/package/bootstrap-4-grid)
 * [sass](https://sass-lang.com/)
-
 <br />
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-Demo content is provided on first run of the app. This content may be edited or deleted, and any changes will be saved. The app may be used as a standalone version by adding to homescreen via the popup banner (Android), or using the browser options menu to download app (Android, iOS).
+Demo content is provided on first run of the app. This content may be edited or deleted, and any changes will be saved. The app may be used as a standalone version by adding to homescreen via the popup banner (Android), or using the browser options menu (Android, iOS).
 <br /><br />
 
 ### Welcome screen:
-Click on the menu to open a Collection. The Collection menu can also be sorted from this screen. To sort, click and hold a menu item until it is highlighted, then drag and drop in place.
+Click on the menu to open a Collection. The Collection menu can also be sorted from this screen. To sort, click and hold a menu item until it is highlighted, then drag and drop in place.  <a href="https://motivator-app.keefstudio.com" target="_blank">Open Motivator App</a>
 
 <img src="screenshots/1.00-desktop-welcome.jpg"><img src="screenshots/1.01-desktop-welcome-sort.jpg">
 <br /><br />
@@ -64,7 +60,7 @@ The Collection title can be edited by clicking on the title displayed at the top
 <img src="screenshots/1.03-desktop-collection.jpg"><img src="screenshots/1.06-desktop-bucket-sort.jpg">
 <br /><br />
 
-### Collection menu and Collection options:
+### Collections/Options menu:
 Use the Collection menu to duplicate or delete the current collection, add a new collection, or display another.
 
 <img src="screenshots/1.04-desktop-collection-menu.jpg"> <img src="screenshots/1.05-dektop-collection-options.jpg">
@@ -83,28 +79,28 @@ Options can be cofigured here to customize how To-do Lists are generated.
 <img src="screenshots/1.09-desktop-randomize.jpg">
 <br /><br />
 
-**Number of items:** The number or items to be generated in the to-do list. Using "0" will generate a random number of items, between 1 and the number of available items.
-<br /><br />
-**Prevent duplicates:** This will ensure that no items are chosen more than once. If deselected, it is possible that the to-do list will contain duplicate items.
-<br /><br />
-**Select from buckets:** Choose one or more buckets from which items may be chosen to generate the to-list. 
-<br /><br />
-**Random:** A random item will be chosen from a random bucket for each to-do item generated.
-<br /><br />
-**Sequential:** A random item will be chosen from each bucket (in order) for each to-do item generated.
+* **Number of items:** The number or items to be generated in the to-do list. Using "0" will generate a random number of items, between 1 and the number of available items.
+
+* **Prevent duplicates:** This will ensure that no items are chosen more than once. If deselected, it is possible that the to-do list will contain duplicate items.
+
+* **Select from buckets:** Choose one or more buckets from which items may be chosen to generate the to-list.
+
+* **Random:** A random item will be chosen from a random bucket for each to-do item generated.
+
+* **Sequential:** A random item will be chosen from each bucket (in order) for each to-do item generated.
 <br /><br />
 
 ### To-do List window:
 After clicking "Generate to-do list" a window will open containing the to-do list generated according to the Randomize setting specified. List items can be checked by clicking on them, and then deleted once checked. Deleted items will be removed from the To-do List window and also from the Bucket from which it was selected. When finished, click "X" to return to Collection screen.
 
-**Remove deleted items from system:** Unchecking this option will ensure that deleted to-do items will not also be deleted from Buckets
+* **Remove deleted items from system:** Unchecking this option will ensure that deleted to-do items will not also be deleted from Buckets
 
 <img src="screenshots/1.11-desktop-todo-checked.jpg">
 <img src="screenshots/1.12-dektop-item-deleted.jpg"> 
-<br /><br />
+<br />
 
 <!-- GETTING STARTED -->
-## Developer Getting Started
+## Developer Guide
 
 To get a local copy up and running follow these simple steps.
 

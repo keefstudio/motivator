@@ -277,7 +277,7 @@ INTRO
     background-color: $accentcolor;
     background: linear-gradient(to right, $accentcolor, $darkgray);
     overflow:auto;
-    z-index:999;
+    z-index:9999;
 
     &.hidden{
         display:none;
