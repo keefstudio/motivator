@@ -77,7 +77,6 @@ To add a new collection, click on the "+" icon. The Collection title, Bucket tit
 Options can be cofigured here to customize how To-do Lists are generated.
 
 <img src="screenshots/1.09-desktop-randomize.jpg">
-<br /><br />
 
 * **Number of items:** The number or items to be generated in the to-do list. Using "0" will generate a random number of items, between 1 and the number of available items.
 
