@@ -144,11 +144,10 @@
       v-bind:removedeleteditems.sync="collections[cindex].removedeleteditems"
       v-on:closeoutput="closeOutput"
     />
-    <div class="alert" :class="{ showing: alertmessage }">
+    <div class="alert" :class="{ showing: itemmessage || bucketmessage }">
       <div class="alert-inner">
-        <h3>
-          {{ alertmessage }}
-        </h3>
+        <span>{{ itemmessage }}</span><br>
+        <strong>{{ bucketmessage }}</strong>
       </div>
     </div>
     <footer class="footer container-fluid">
@@ -193,7 +192,7 @@ export default {
       editcollectiontitle: false,
       showintro: true,
       bucketscleared: 0,
-      alertmessage: "",
+      itemmessage: "",
       navstick: false,
     };
   },
@@ -580,11 +579,11 @@ export default {
           //display items deleted alert
           var deleteditems = deduped.length;
           if(deleteditems > 0){
-            scope.alertmessage = deleteditems + " item";
+            scope.itemmessage = deleteditems + " item";
             if(deleteditems > 1){
-              scope.alertmessage += "s";
+              scope.itemmessage += "s";
             }
-            scope.alertmessage += " deleted";
+            scope.itemmessage += " deleted";
             scope.showAlert();
           }
           //loop through buckets to remove tagged items
@@ -619,13 +618,13 @@ export default {
               scope.deleteBucket(i);
               //construct alert message
               scope.bucketscleared++;
-              scope.alertmessage = scope.bucketscleared + " bucket";
+              scope.bucketmessage = scope.bucketscleared + " bucket";
               if (scope.bucketscleared > 1) {
-                scope.alertmessage += "s";
+                scope.bucketmessage += "s";
               }
-              scope.alertmessage += " emptied";
+              scope.bucketmessage += " emptied";
               if (scope.collections[scope.cindex].buckets.length === 0) {
-                scope.alertmessage = "All buckets emptied";
+                scope.bucketmessage = "All buckets emptied";
               }
               scope.showAlert();
               //back up bucket loop for one less bucket
@@ -659,7 +658,8 @@ export default {
             onReverseComplete: function () {
               //reset
               scope.bucketscleared = 0;
-              scope.alertmessage = "";
+              scope.itemmessage = "";
+              scope.bucketmessage = "";
             },
           }
         );

@@ -1365,12 +1365,18 @@ MISC
     }
 
     .alert-inner{
+        font-size:1.8rem;
+        line-height: 1.6em;
         text-align: center;
         color:#fff;
         padding:20px 30px;
         border-radius:6px;
         opacity:.95;
         background:$accentcolor;
+
+        strong{
+            border-top:1px solid $highlight;
+        }
     }
 }
 

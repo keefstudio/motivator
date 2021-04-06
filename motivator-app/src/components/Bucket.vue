@@ -107,9 +107,11 @@ export default {
     //convert items list in textarea to array and update in data object
     updateItems: function (data) {
       data = data.split("\n");
-      //remove last item if blank
-      if (data[data.length - 1] == "" && this.editcardlist == false) {
-        data.splice(data.length - 1, 1);
+      //remove item if blank
+      for(var b=0; b < data.length; b++){
+        if (data[b] == "" && this.editcardlist == false) {
+          data.splice(b, 1);
+        }
       }
       //return something in nothing
       if(data.length == 0){
@@ -117,6 +119,7 @@ export default {
       }
       //update bucket items list array
       this.bucket.items = data;
+      this.listCardItems();
     },
     //focus and select text in provided input
     focusInput: function (input, selectall) {
