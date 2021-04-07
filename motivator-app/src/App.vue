@@ -12,8 +12,7 @@
             <p>
               A list making app to help with routine and indecision.
               Sort bucket items into collections and create radomly
-              generated to-do lists. Check and delete items to track
-              progress, and stay motivated!
+              generated to-do lists. Check and delete completed items to watch buckets get emptied and be more motivated!
             </p>
           </div>
           <div class="col-md intromenu">
