@@ -95,37 +95,8 @@ After clicking "Generate to-do list" a window will open containing the to-do lis
 
 <img src="screenshots/1.11-desktop-todo-checked.jpg">
 <img src="screenshots/1.12-dektop-item-deleted.jpg"> 
-<br />
-
-<!-- GETTING STARTED -->
-## Developer Guide
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to edit the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/keefstudio/motivator.git
-   ```
-2. Install NPM packages
-   ```sh
-   cd motivator-app
-   npm install
-   ```
-3. Run Project Locally
-   ```sh
-   npm run serve
-   ```
 <br /><br />
+
 
 <!-- CONTACT -->
 ## Contact
