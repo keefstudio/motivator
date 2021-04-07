@@ -81,7 +81,7 @@ Options can be cofigured here to customize how To-do Lists are generated.
 
 * **Prevent duplicates:** This will ensure that no items are chosen more than once. If deselected, it is possible that the to-do list will contain duplicate items.
 
-* **Select from buckets:** Choose one or more buckets from which items may be chosen to generate the to-list.
+* **Select from buckets:** Choose one or more buckets from which items may be chosen to generate the to-do list.
 
 * **Random:** A random item will be chosen from a random bucket for each to-do item generated.
 
