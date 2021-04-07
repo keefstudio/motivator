@@ -95,8 +95,7 @@ After clicking "Generate to-do list" a window will open containing the to-do lis
 
 <img src="screenshots/1.11-desktop-todo-checked.jpg">
 <img src="screenshots/1.12-dektop-item-deleted.jpg"> 
-<br /><br />
-
+<br />
 
 <!-- CONTACT -->
 ## Contact
