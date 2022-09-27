@@ -18,7 +18,7 @@
 
   <p align="center">
     A list making app to help with routine and indecision.
-    Sort bucket items into collections and create radomly
+    Sort bucket items into collections and create randomly
     generated to-do lists. Check and delete completed items, watch buckets empty, and be more motivated!
     <br />
     <br />
@@ -30,7 +30,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-A ground-up responsive design progressive web application project, built to be a living example of my work as a front-end developer. This app works with modern browsers and may also be installed as a standalone application on mobile devices. App data is saved to browser localstorage which will persist through sessions until browser cache is deleted.
+A ground-up responsive native web app, built to be a living example of my work as a front-end developer. This app works with modern browsers and may also be installed as a standalone application on mobile devices. App data is saved to browser localstorage which will persist through sessions until browser cache is deleted.
 
 The concept for this app is an experiment in motivation based on the idea that productivity is often hindered by decision-exhaustion and option-overload. By having to-do lists randomly generated&mdash;skipping the decision-making process, more energy is left for the tasks at hand.
 <br />
