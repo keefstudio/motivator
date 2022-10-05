@@ -11,7 +11,7 @@
             <h2><i class="icon-check-1"></i>Motivator</h2>
             <p>
               A list making app to help with routine and indecision.
-              Sort bucket items into collections and create radomly
+              Sort bucket items into collections and create randomly
               generated to-do lists. Check and delete completed items, watch buckets empty, and be more motivated!
             </p>
           </div>
