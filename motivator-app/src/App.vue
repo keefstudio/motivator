@@ -10,9 +10,10 @@
           <div class="col-md introcopy">
             <h2><i class="icon-check-1"></i>Motivator</h2>
             <p>
-              A list making app to help with routine and indecision.
-              Sort bucket items into collections and create radomly
-              generated to-do lists. Check and delete completed items, watch buckets empty, and be more motivated!
+              A list making app to help with routine and indecision. Sort bucket
+              items into collections and create randomly generated to-do lists.
+              Check and delete completed items, watch buckets empty, and be more
+              motivated!
             </p>
           </div>
           <div class="col-md intromenu">
@@ -145,12 +146,14 @@
     />
     <div class="alert" :class="{ showing: itemmessage || bucketmessage }">
       <div class="alert-inner">
-        <span>{{ itemmessage }}</span><br>
+        <span>{{ itemmessage }}</span
+        ><br />
         <strong>{{ bucketmessage }}</strong>
       </div>
     </div>
     <footer class="footer container-fluid">
-      *App data is saved to browser cache. &copy; Keef Studio 2021. View project on <a href="https://github.com/keefstudio/motivator">Github</a>.
+      *App data is saved to browser cache. &copy; Keef Studio 2021. View project
+      on <a href="https://github.com/keefstudio/motivator">Github</a>.
     </footer>
   </div>
 </template>
@@ -204,25 +207,25 @@ export default {
     }
     //scroll listener for sticky nav
     var scrollpos = 0;
-    window.addEventListener('scroll', () => {
+    window.addEventListener("scroll", () => {
       var scrollY = window.scrollY;
       //var headerheight = document.getElementById('header').offsetHeight;
-      if(scrollY < (scrollpos - 5) && scrollY > 3){
+      if (scrollY < scrollpos - 5 && scrollY > 3) {
         this.navstick = true;
-      } else if(scrollY > (scrollpos + 5)){
+      } else if (scrollY > scrollpos + 5) {
         this.navstick = false;
         this.showcollections = false;
       }
       scrollpos = scrollY;
     });
   },
-  destroyed () {
-    window.removeEventListener('scroll');
+  destroyed() {
+    window.removeEventListener("scroll");
   },
   async accept() {
     this.showUpdateUI = false;
     await this.$workbox.messageSW({ type: "SKIP_WAITING" });
-  },  
+  },
   mounted() {
     //import app data from localStorage
     if (localStorage.appdata) {
@@ -385,8 +388,8 @@ export default {
     },
     deleteBucket: function (index) {
       var currbuckets = this.collections[this.cindex].buckets;
-      var currlistbuckets = this.collections[this.cindex].listoptions
-        .listbuckets;
+      var currlistbuckets =
+        this.collections[this.cindex].listoptions.listbuckets;
       var bindex = currlistbuckets.indexOf(index);
 
       if (bindex > -1) {
@@ -577,9 +580,9 @@ export default {
         gsap.delayedCall(1, function () {
           //display items deleted alert
           var deleteditems = deduped.length;
-          if(deleteditems > 0){
+          if (deleteditems > 0) {
             scope.itemmessage = deleteditems + " item";
-            if(deleteditems > 1){
+            if (deleteditems > 1) {
               scope.itemmessage += "s";
             }
             scope.itemmessage += " deleted";
@@ -628,7 +631,7 @@ export default {
               scope.showAlert();
               //back up bucket loop for one less bucket
               i--;
-            } 
+            }
           }
         });
       }
